@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--Ad App Id - Live Ad Unit Id-->
+    <string name="admob_live_ad_unit_id">admob_live_ad_unit_id</string>
+    <!--Ad App Id-->
+
+    <!--Ad Unit Id - Live Banner Ad Id-->
+    <string name="admob_live_banner_ad_id">admob_live_banner_ad_id</string>
+    <!--Ad Unit Id-->
+
+    <!--Ad Unit Id - Live Interstitial Ad Id-->
+    <string name="admob_live_interstitial_ad_id">admob_live_interstitial_ad_id</string>
+    <!--Ad Unit Id-->
+</resources>

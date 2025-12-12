@@ -38,6 +38,13 @@ android {
         buildConfig = true
         compose = true
     }
+    publishing {
+        // REQUIRED FOR JITPACK
+        singleVariant("release") {
+            withSourcesJar()
+            withJavadocJar()
+        }
+    }
 }
 
 dependencies {
@@ -65,10 +72,10 @@ publishing {
     publications {
         register<MavenPublication>("release") {
             afterEvaluate {
+                from(components["release"])
                 groupId = "com.github.rzrasel"
                 artifactId = "libs-admob"
                 version = "1.0.0"
-                from(components["release"])
             }
         }
     }

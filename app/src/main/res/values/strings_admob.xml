@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--Debug Ad App Unit Id-->
+    <string name="admob_active_ad_unit_id">@string/admob_debug_ad_unit_id</string>
+    <string name="admob_active_banner_ad_id">@string/admob_debug_banner_ad_id</string>
+    <string name="admob_active_interstitial_ad_id">@string/admob_debug_interstitial_ad_id</string>
+    <!--Debug Ad App Unit Id-->
+
+    <!--Live Ad App Unit Id-->
+    <!--<string name="admob_active_ad_unit_id">@string/admob_live_ad_unit_id</string>
+    <string name="admob_active_banner_ad_id">@string/admob_live_banner_ad_id</string>
+    <string name="admob_active_interstitial_ad_id">@string/admob_live_interstitial_ad_id</string>-->
+    <!--Live Ad App Unit Id-->
+</resources>

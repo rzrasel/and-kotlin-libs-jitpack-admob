@@ -1,5 +1,6 @@
 package com.rzrasel.admob.composable
 
+import android.content.Context
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -14,7 +15,10 @@ import androidx.core.graphics.toColorInt
 import com.rzrasel.admob.bannerad.AdMobBannerAd
 
 @Composable
-fun AdMobBannerAdLayout(index: Int = 0) {
+fun AdMobBannerAdLayout(
+    context: Context,
+    index: Int = 0,
+) {
     Column(
         modifier = Modifier
             .fillMaxWidth()
@@ -25,6 +29,7 @@ fun AdMobBannerAdLayout(index: Int = 0) {
     ) {
         //Text("Layer 1.1", fontSize = 40.sp)
         AdMobBannerAd.AdMobBannerLayout(
+            context = context,
             modifier = Modifier.fillMaxWidth(),
             bannerAdIndex = index,
         )

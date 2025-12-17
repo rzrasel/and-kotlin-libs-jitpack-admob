@@ -39,6 +39,7 @@ object AdMobBannerAd {
     }
 }*/
 
+import android.content.Context
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.runtime.Composable
@@ -53,9 +54,17 @@ object AdMobBannerAd {
 
     @Composable
     fun AdMobBannerLayout(
+        context: Context,
         modifier: Modifier = Modifier,
         bannerAdIndex: Int = 0,
     ) {
+        val displayMetrics = context.resources.displayMetrics
+        val adWidthPixels = displayMetrics.widthPixels
+        val adWidthDp = (adWidthPixels / displayMetrics.density).toInt()
+        val adSize = AdSize.getCurrentOrientationAnchoredAdaptiveBannerAdSize(
+            context,
+            adWidthDp
+        )
         /*Column(
             modifier = modifier
         ) {
@@ -88,7 +97,8 @@ object AdMobBannerAd {
                     //adSize = AdSize.BANNER
                     // on below line specifying ad unit id
                     // currently added a test ad unit id.
-                    setAdSize(AdSize.FULL_BANNER)
+                    //setAdSize(AdSize.FULL_BANNER)
+                    setAdSize(adSize)
                     //adUnitId = "ca-app-pub-3940256099942544/6300978111"
                     adUnitId = context.getString(bannerAdId)
                     //adUnitId = bannerAdUnitId

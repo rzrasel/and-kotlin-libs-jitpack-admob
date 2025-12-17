@@ -14,6 +14,7 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.rzrasel.admob.composable.AdMobBannerAdLayout
@@ -50,7 +51,8 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
         //|-----|DISPLAY ADMOB BANNER AD LAYOUT|-----|
         Spacer(modifier = Modifier.height(46.dp))
         //|----|Load and display AdMob banner ad|----|
-        AdMobBannerAdLayout()
+        val context = LocalContext.current
+        AdMobBannerAdLayout(context)
         Spacer(modifier = Modifier.height(20.dp))
         Text(
             text = "Hello $name!",

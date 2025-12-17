@@ -88,7 +88,7 @@ object AdMobBannerAd {
                     //adSize = AdSize.BANNER
                     // on below line specifying ad unit id
                     // currently added a test ad unit id.
-                    setAdSize(AdSize.BANNER)
+                    setAdSize(AdSize.FULL_BANNER)
                     //adUnitId = "ca-app-pub-3940256099942544/6300978111"
                     adUnitId = context.getString(bannerAdId)
                     //adUnitId = bannerAdUnitId

@@ -26,7 +26,7 @@ fun AdMobBannerAdLayout(index: Int = 0) {
         //Text("Layer 1.1", fontSize = 40.sp)
         AdMobBannerAd.AdMobBannerLayout(
             modifier = Modifier.fillMaxWidth(),
-            bannerAdIndex = 0,
+            bannerAdIndex = index,
         )
         Spacer(modifier = Modifier.height(0.dp))
     }
